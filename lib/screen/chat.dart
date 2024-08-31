@@ -78,6 +78,7 @@ class _ChatPageState extends State<ChatPage> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: TextField(
+                    autofocus: true,
                     controller: controller,
                     onSubmitted: (data) {
                       messages.add({
@@ -102,7 +103,9 @@ class _ChatPageState extends State<ChatPage> {
             ),
           );
         } else {
-          return Text("Loading");
+          return Center(
+            child: CircularProgressIndicator(),
+          );
         }
       },
     );

@@ -70,6 +70,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     height: 15,
                   ),
                   Customtextfield(
+                    isfoucs: true,
                     onChanged: (p0) {
                       email = p0;
                     },
